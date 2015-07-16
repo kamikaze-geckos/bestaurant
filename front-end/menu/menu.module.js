@@ -15,5 +15,5 @@
           templateUrl: 'menu/views/item.html',
           controller: 'MenuController'
         })
-    })
+    });
 })();

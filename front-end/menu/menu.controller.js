@@ -21,11 +21,9 @@
       };
 
       if($routeParams.item_id){
-        $scope.getItem = function($routeParams.item_id){
-          MenuService.getItem(item_id).success(function(item){
-            $scope.item = item;
-          });
-        };
+        MenuService.getItem($routeParams.item_id).success(function(item){
+          $scope.item = item;
+        });
       };
-    })
+    });
 })();
