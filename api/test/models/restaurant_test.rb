@@ -9,6 +9,9 @@ class RestaurantTest < ActiveSupport::TestCase
     assert @restaurant.valid?
   end
 
+  test "has many items" do
+    assert_respond_to @restaurant, :items
+  end
 end
 
 class Name < RestaurantTest
