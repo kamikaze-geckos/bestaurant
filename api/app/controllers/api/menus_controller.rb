@@ -1,4 +1,4 @@
-class menusController < ApplicationController
+class MenusController < ApplicationController
   respond_to :json
 
   def index
