@@ -1,4 +1,6 @@
 class Menu < ActiveRecord::Base
   belongs_to :restaruant
-  belongs_to :item
+  has_many :items
+
+  validates :item_id, :restaruant_id, presence: true
 end
