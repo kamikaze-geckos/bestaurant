@@ -133,4 +133,40 @@ CATALOG
         transition: all .25s ease;
         -webkit-transition: all .25s ease; }
 
+/**************************
+SINGLE MENU ITEM
+**************************/
+.singleItem {
+  width: 90%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 220px;
+  margin: 20px;
+  border: 2px solid #DCFA7C;
+  padding: 10px; }
+  .singleItem > div {
+    flex-basis: 0; }
+  .singleItem > .singleItemImg {
+    flex-grow: 1;
+    justify-content: center; }
+    .singleItem > .singleItemImg > img {
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto; }
+  .singleItem > .singleItemDescription {
+    padding-left: 30px;
+    flex-grow: 4; }
+    .singleItem > .singleItemDescription > ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .singleItem > .singleItemDescription > ul > li {
+        display: inline-block; }
+    .singleItem > .singleItemDescription > p {
+      text-align: justify;
+      width: 100%; }
+
 /*# sourceMappingURL=styles.css.map */
