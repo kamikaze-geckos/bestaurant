@@ -8,6 +8,12 @@
         $scope.items = items;
       });
 
+      if($routeParams.item_id){
+        MenuService.getItem($routeParams.item_id).success(function(item){
+          $scope.item = item;
+        });
+      };
+
       $scope.addItem = function(newItem){
         MenuService.addItem(newItem);
       };
@@ -20,10 +26,5 @@
         MenuService.editItem(item_id, updatedItem);
       };
 
-      if($routeParams.item_id){
-        MenuService.getItem($routeParams.item_id).success(function(item){
-          $scope.item = item;
-        });
-      };
     });
 })();
