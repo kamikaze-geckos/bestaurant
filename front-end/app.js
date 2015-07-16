@@ -1,7 +1,11 @@
 (function() {
   'use strict';
   angular
-    .module('bestaurant', ['ngRoute'])
+    .module('bestaurant', [
+      'ngRoute',
+      'underscore',
+      'menu'
+    ])
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
