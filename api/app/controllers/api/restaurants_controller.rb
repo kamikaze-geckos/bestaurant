@@ -24,9 +24,9 @@ class RestaurantsController < ApplicationController
     @restaurant = find_restaurant
     u = @restaurant.update_attributes(restaurant_params)
       if u
-        render json: :index
+        render json: status: 201
       else
-        render json: :edit
+        render json: status: 422
       end
     end
   end

@@ -24,9 +24,9 @@ class itemsController < ApplicationController
     @item = find_item
     u = @item.update_attributes(item_params)
       if u
-        render json: :index
+        render json: status: 201
       else
-        render json: :edit
+        render json: status: 422
       end
     end
   end

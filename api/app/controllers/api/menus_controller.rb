@@ -24,9 +24,9 @@ class menusController < ApplicationController
     @menu = find_menu
     u = @menu.update_attributes(menu_params)
       if u
-        render json: :index
+        render json: status: 201
       else
-        render json: :edit
+        render json: 422
       end
     end
   end
