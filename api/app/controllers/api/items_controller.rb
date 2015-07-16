@@ -14,7 +14,7 @@ class itemsController < ApplicationController
   def create
     @item = Item.new(item_params)
       if @item.save
-        render  status: :created, location: nil
+        render  status: 201
       else
         render json: @item.errors, status: 422
     end

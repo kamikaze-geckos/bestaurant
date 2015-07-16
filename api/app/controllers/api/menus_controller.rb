@@ -14,7 +14,7 @@ class menusController < ApplicationController
   def create
     @menu = Menunew(menu_params)
       if @menu.save
-        render  status: :created, location: nil
+        render  status: 201
       else
         render json: @menu.errors, status: 422
     end

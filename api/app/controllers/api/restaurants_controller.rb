@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
       if @restaurant.save
-        render  status: :created, location: nil
+        render  status: 201
       else
         render json: @restaurant.errors, status: 422
     end
