@@ -19,10 +19,30 @@
   </div>
 </div>
 <div class="singleItemEdit">
-  <input type="text" name="name" value="{{item.name}}">
-  <input type="text" name="price" value="{{item.price}}">
-  <input type="text" name="price" value="{{item.category}}">
-  <input type="text" name="pic" value="{{item.pic}}">
-  <textarea name="description" rows="8" cols="40">{{item.description}}</textarea>
-  <button type="button" name="button">Update</button>
+  <h2>Update Item</h2>
+  <form id="updateItemForm">
+    <div>
+      <input type="text" name="name" value="{{item.name}}">
+      <label for="name">Name</label>
+    </div>
+    <div>
+      <input type="text" name="price" value="{{item.price | currency}}">
+      <label for="price">Price</label>
+    </div>
+    <div>
+      <input type="text" name="category" value="{{item.category}}">
+      <label for="category">Category</label>
+    </div>
+    <div>
+      <input type="text" name="pic" value="{{item.pic}}">
+      <label for="pic">Image</label>
+    </div>
+    <div>
+      <textarea name="description" rows="8" cols="40">{{item.description}}</textarea>
+      <label for="description">Description</label>
+    </div>
+    <div>
+      <input type="submit" name="submitButton" value="Update">
+    </div>
+  </form>
 </div>
