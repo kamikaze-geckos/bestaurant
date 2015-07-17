@@ -18,25 +18,21 @@
       };
 
       var addItem = function(newItem){
-        $('.alertItem').removeClass('startOpacity').addClass('endOpacity');
-        setTimeout(function(){
-          $('.alertItem').fadeIn().removeClass('endOpacity').addClass('startOpacity');
-        }, 1000);
-        $http.post(url, newItem).success(function(resp){
+        $http.post(url + '.json', newItem).success(function(resp){
           $rootScope.$broadcast('item:added');
           console.log("new item added");
         });
       };
 
       var deleteItem = function(id){
-        $http.delete(url + '/' + id).success(function(resp){
+        $http.delete(url + '/' + id + '.json').success(function(resp){
           $rootScope.$broadcast('item:deleted');
           console.log("item deleted");
         });
       };
 
       var editItem = function(id, updatedItem){
-        $http.put(url + '/' + id, updatedItem).success(function(resp){
+        $http.put(url + '/' + id + '.json', updatedItem).success(function(resp){
           $rootScope.$broadcast('item:edited');
           console.log("item updated");
         });

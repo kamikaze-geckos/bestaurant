@@ -23,7 +23,6 @@
       $scope.newItem = {};
 
       $scope.addItem = function(newItem){
-        console.log(newItem);
         MenuService.addItem(newItem);
         $scope.newItem = {};
       };
