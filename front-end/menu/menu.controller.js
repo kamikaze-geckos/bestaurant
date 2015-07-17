@@ -23,6 +23,7 @@
       $scope.newItem = {};
 
       $scope.addItem = function(newItem){
+        $('.alertItem').fadeIn('slow').fadeOut('slow');
         MenuService.addItem(newItem);
         $scope.newItem = {};
       };
@@ -34,6 +35,7 @@
 
 
       $scope.editItem = function(id, updatedItem){
+        $('.alertItem').fadeIn('slow').fadeOut('slow');
         console.log("edit");
         console.log(updatedItem);
         MenuService.editItem(id, updatedItem);

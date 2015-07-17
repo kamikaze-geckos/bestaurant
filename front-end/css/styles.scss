@@ -284,10 +284,10 @@ DETAIL MENU ITEM
 
 .singleItemEdit {
   position:relative;
-  width: 90%;
   margin:auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-bottom: 25px;
   border: 2px solid $c2;
   background-color: $c2;
   color: $c3;
@@ -353,6 +353,10 @@ DETAIL MENU ITEM
         }
       }
 
+      > textarea {
+        max-width: 100%;
+      }
+
       > label {
         background-color: $c2;
         position: absolute;
@@ -361,6 +365,15 @@ DETAIL MENU ITEM
       }
     }
   }
+}
+
+.alertItem {
+  display: none;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  padding: 10px 0;
 }
 
 /**************************
@@ -443,16 +456,6 @@ SINGLE MENU ITEM
     }
   }
 }
-
-.alertItem{
-  width: 100%;
-}
-
-
-.hide{
-  display: none;
-}
-
 
 /**************************
 QUERIES
