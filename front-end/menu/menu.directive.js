@@ -5,7 +5,7 @@
     .directive('menuItem', function(){
       return{
         restrict: 'E',
-        templateUrl: 'menu/views/item.html',
+        templateUrl: 'menu/views/detailItem.html',
         scope: {
           i: '='
         }

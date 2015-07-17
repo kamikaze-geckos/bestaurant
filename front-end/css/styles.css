@@ -132,19 +132,31 @@ CATALOG
         -webkit-transition: all .25s ease; }
 
 /**************************
-<<<<<<< HEAD
-SINGLE MENU ITEM
+MENU HEADER
+**************************/
+.menuSort {
+  margin: auto;
+  padding-bottom: 15px; }
+  .menuSort > li {
+    display: inline-block;
+    font-size: 0.75em; }
+    .menuSort > li > a {
+      color: #DCFA7C; }
+
+/**************************
+DETAIL MENU ITEM
 **************************/
 .singleItem {
   width: 90%;
   display: inline-flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
-  height: 220px;
+  height: 250px;
   margin: 20px;
-  border: 2px solid #DCFA7C;
-  padding: 10px; }
+  border: 2px solid #980000;
+  padding: 10px 15px 10px 15px; }
   .singleItem > div {
     flex-basis: 0; }
   .singleItem > .singleItemImg {
@@ -167,7 +179,44 @@ SINGLE MENU ITEM
     .singleItem > .singleItemDescription > p {
       text-align: justify;
       width: 100%; }
-=======
+
+/**************************
+SINGLE MENU ITEM
+**************************/
+.menu {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px; }
+  .menu > h1 {
+    text-align: center;
+    border: 2px solid #980000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px; }
+
+.singleMenuItem {
+  margin: auto;
+  width: 90%;
+  border: 2px solid #980000;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 15px; }
+  .singleMenuItem > .singleMenuItemDescription {
+    padding-left: 30px;
+    flex-grow: 4; }
+    .singleMenuItem > .singleMenuItemDescription > ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .singleMenuItem > .singleMenuItemDescription > ul > li {
+        display: inline-block; }
+    .singleMenuItem > .singleMenuItemDescription > p {
+      text-align: justify;
+      width: 100%;
+      font-size: 0.75em; }
+
+/**************************
 QUERIES
 **************************/
 @media screen and (max-width: 960px) {
@@ -201,6 +250,5 @@ QUERIES
     height: 300px; }
     .catalog .restaurantBlock .restaurantInfo .restaurantTitle h2 {
       font-size: 1.75rem; } }
->>>>>>> 94fef2a408e5b1c17e96995801343b189836cd4f
 
 /*# sourceMappingURL=styles.css.map */
