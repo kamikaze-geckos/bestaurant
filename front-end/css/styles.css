@@ -269,6 +269,10 @@ SINGLE MENU ITEM
     border-left: 0px;
     border-right: 0px; }
 
+.subMenu {
+  height: 500px;
+  overflow: scroll; }
+
 .singleMenuItem {
   margin: auto;
   width: 90%;

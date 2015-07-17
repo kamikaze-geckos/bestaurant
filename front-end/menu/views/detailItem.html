@@ -15,34 +15,33 @@
       <li><h4>{{item.price | currency}}</h4></li>
     </ul>
     <p>{{item.description}}</p>
-    <a href="" class="editItemLink" ng-click="toggleUpdateItem"><i class="fa fa-wrench"></i> Update Item</a>
   </div>
 </div>
 <div class="singleItemEdit">
   <h2>Update Item</h2>
-  <form id="updateItemForm">
+  <form id="updateItemForm" novalidate>
     <div>
-      <input type="text" name="name" value="{{item.name}}">
+      <input type="text" name="name" ng-model="updatedItem.name" required>
       <label for="name">Name</label>
     </div>
     <div>
-      <input type="text" name="price" value="{{item.price | currency}}">
+      <input type="text" name="price" ng-model="updatedItem.price | currency" required>
       <label for="price">Price</label>
     </div>
     <div>
-      <input type="text" name="category" value="{{item.category}}">
+      <input type="text" name="category" ng-model="updatedItem.category">
       <label for="category">Category</label>
     </div>
     <div>
-      <input type="text" name="pic" value="{{item.pic}}">
+      <input type="text" name="pic" ng-model="updatedItem.pic">
       <label for="pic">Image</label>
     </div>
     <div>
-      <textarea name="description" rows="8" cols="40">{{item.description}}</textarea>
+      <textarea name="description" rows="8" cols="40" ng-model="updatedItem.description"></textarea>
       <label for="description">Description</label>
     </div>
     <div>
-      <input type="submit" name="submitButton" value="Update">
+      <input type="submit" name="submitButton" value="Update" ng-click="editItem(item.id, updatedItem)">
     </div>
   </form>
 </div>

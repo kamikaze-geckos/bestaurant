@@ -7,14 +7,12 @@
 
       var getMenu = function(restaurant_id){
         return $http.get(url + '.json').success(function(data){
-          console.log(data);
           return data;
         })
       };
 
       var getItem = function(id){
         return $http.get(url + '/' + id + '.json').success(function(item){
-          console.log(item);
           return item;
         })
       };
