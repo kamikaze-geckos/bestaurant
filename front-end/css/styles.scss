@@ -298,16 +298,20 @@ DETAIL MENU ITEM
   margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid $c2;
-  padding: 10px 15px 10px 15px;
   background-color: $c2;
   color: $c3;
   overflow: hidden;
 
   h2 {
+    font-size: 1.5rem;
+    background-color: $c3;
+    color: $c2;
     text-align: center;
     font-weight: lighter;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   #updateItemForm {
@@ -330,6 +334,8 @@ DETAIL MENU ITEM
       > input[type=submit] {
         transition: all .25s ease;
         -webkit-transition: all .25s ease;
+        padding: 10px;
+
         &:hover {
           background-color: $c3;
           color: $c2;
@@ -378,14 +384,15 @@ SINGLE MENU ITEM
   margin-top: 30px;
   margin-bottom: 50px;
 
-  >h1{
-    background-color: $c2;
-    color: $c3;
+  >h2 {
+    font-size: 1.5rem;
+    background-color: $c3;
+    color: $c2;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     text-align: center;
-    border: 2px solid $c2;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
