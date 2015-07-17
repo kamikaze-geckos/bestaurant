@@ -20,11 +20,16 @@
         });
       };
 
+      $scope.newItem = {};
+
       $scope.addItem = function(newItem){
+        console.log(newItem);
         MenuService.addItem(newItem);
+        $scope.newItem = {};
       };
 
       $scope.deleteItem = function(id){
+        console.log("delete");
         MenuService.deleteItem(id);
       };
 
@@ -33,7 +38,6 @@
         console.log("edit");
         console.log(updatedItem);
         MenuService.editItem(id, updatedItem);
-        updatedItem = {};
       };
 
       $scope.sortName = 'id';
