@@ -11,7 +11,7 @@
           controller: 'MenuController'
         })
 
-        .when('/restaurant_id/item_id', {
+        .when('/restaurant_id/:itemId', {
           templateUrl: 'menu/views/detailItem.html',
           controller: 'MenuController'
         })
