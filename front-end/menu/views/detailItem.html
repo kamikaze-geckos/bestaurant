@@ -4,20 +4,22 @@
   </div>
 </header>
 
-<a href="#/restaurant_id/">Back to Menu</a>
-<div class="singleItem">
-  <div class="singleItemImg" ng-if="item.pic">
-    <img ng-src="{{item.pic}}"/>
-  </div>
-  <div class="singleItemDescription">
-    <div>
-      {{item.name}}
+<div class="pageWrapper">
+  <a href="#/restaurant_id/">Back to Menu</a>
+  <div class="singleItem">
+    <div class="singleItemImg" ng-if="item.pic">
+      <img ng-src="{{item.pic}}"/>
     </div>
-    <div>
-      {{item.description}}
-    </div>
-    <div>
-      {{item.price | currency}}
+    <div class="singleItemDescription">
+      <div>
+        {{item.name}}
+      </div>
+      <div>
+        {{item.description}}
+      </div>
+      <div>
+        {{item.price | currency}}
+      </div>
     </div>
   </div>
 </div>

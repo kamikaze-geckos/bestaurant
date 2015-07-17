@@ -155,11 +155,8 @@ DETAIL MENU ITEM
   margin-top: 110px; }
 
 .singleItem {
-  width: 90%;
   height: 150px;
   background-color: white;
-  margin: auto;
-  margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid #980000;
   overflow: hidden;
@@ -256,22 +253,30 @@ DETAIL MENU ITEM
 /**************************
 SINGLE MENU ITEM
 **************************/
-.menu {
-  width: 90%;
-  background-color: white;
+.menuTitle {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  background-color: #DCFA7C;
+  color: #980000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border: 2px solid #980000;
+  border-bottom: none; }
+
+.menu {
+  position: relative;
+  z-index: 0;
+  height: 600px;
+  background-color: white;
+  overflow: scroll;
+  border: 2px solid #980000;
+  border-top: none;
   margin: auto;
-  margin-top: 30px;
   margin-bottom: 50px; }
-  .menu > h2 {
-    font-size: 1.5rem;
-    background-color: #DCFA7C;
-    color: #980000;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    text-align: center;
-    font-weight: lighter;
-    padding-top: 25px;
-    padding-bottom: 25px; }
 
 .subMenu {
   height: 500px;

@@ -15,54 +15,54 @@
     <li> <a href="" ng-click="selectSort('category', $event)"> Category</a></li>
   </ul>
 </header>
-<a href="#/restaurants">Back to Restaurants</a>
 
-<div class="menu">
-  <h2>Menu</h2>
-  <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
-    <div class="singleMenuItemDescription">
-      <div>
-        <a href="#/restaurant_id/{{item.id}}">{{item.name}}</a>
+<div class="pageWrapper">
+  <a href="#/restaurants">Back to Restaurants</a>
+
+  <h2 class="menuTitle">Menu</h2>
+  <div class="menu" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+    <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
+      <div class="singleMenuItemDescription">
+        <div>
+          <a href="#/restaurant_id/{{item.id}}">{{item.name}}</a>
+        </div>
+        <div>
+          {{item.description}}
+        </div>
+        <div>
+          {{item.price | currency}}
+        </div>
+        <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
       </div>
-      <div>
-        {{item.description}}
-      </div>
-      <div>
-        {{item.price | currency}}
-      </div>
-      <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
     </div>
   </div>
-</div>
 
-<div class="singleItemEdit">
-  <h2>Add an Item</h2>
-  <form id="updateItemForm" novalidate>
-    <div>
-      <input type="text" name="name" ng-model="newItem.name" required>
-      <label for="name">Name</label>
-    </div>
-    <div>
-      <input type="text" name="price" ng-model="newItem.price" required>
-      <label for="price">Price</label>
-    </div>
-    <div>
-      <input type="text" name="category" ng-model="newItem.category">
-      <label for="category">Category</label>
-    </div>
-    <div>
-      <input type="text" name="pic" ng-model="newItem.pic">
-      <label for="pic">Image</label>
-    </div>
-    <div>
-      <textarea name="description" rows="8" cols="40" ng-model="newItem.description"></textarea>
-      <label for="description">Description</label>
-    </div>
-    <div>
-      <input type="submit" name="submitButton" value="Add" ng-click="addItem(newItem)">
-    </div>
-  </form>
-  <div class="alertItem startOpacity">
-    <h2>Item Added</h2>
+  <div class="singleItemEdit">
+    <h2>Add an Item</h2>
+    <form id="updateItemForm" novalidate>
+      <div>
+        <input type="text" name="name" ng-model="newItem.name" required>
+        <label for="name">Name</label>
+      </div>
+      <div>
+        <input type="text" name="price" ng-model="newItem.price" required>
+        <label for="price">Price</label>
+      </div>
+      <div>
+        <input type="text" name="category" ng-model="newItem.category">
+        <label for="category">Category</label>
+      </div>
+      <div>
+        <input type="text" name="pic" ng-model="newItem.pic">
+        <label for="pic">Image</label>
+      </div>
+      <div>
+        <textarea name="description" rows="8" cols="40" ng-model="newItem.description"></textarea>
+        <label for="description">Description</label>
+      </div>
+      <div>
+        <input type="submit" name="submitButton" value="Add" ng-click="addItem(newItem)">
+      </div>
+    </form>
   </div>
 </div>
