@@ -146,24 +146,30 @@ MENU HEADER
 /**************************
 DETAIL MENU ITEM
 **************************/
+.singleItemHeader > h1 {
+  margin-top: 110px; }
+
 .singleItem {
   width: 90%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  height: 250px;
-  margin: 20px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 2px solid #980000;
   padding: 10px 15px 10px 15px; }
   .singleItem > div {
     flex-basis: 0; }
   .singleItem > .singleItemImg {
     flex-grow: 1;
-    justify-content: center; }
+    width: 200px;
+    height: 200px; }
     .singleItem > .singleItemImg > img {
-      max-width: 200px;
+      display: block;
+      max-width: 100%;
       max-height: 200px;
       width: auto;
       height: auto; }
@@ -186,7 +192,8 @@ SINGLE MENU ITEM
 .menu {
   width: 90%;
   margin: auto;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 50px; }
   .menu > h1 {
     text-align: center;
     border: 2px solid #980000;
@@ -227,7 +234,15 @@ QUERIES
     justify-content: center; }
     .catalog .restaurantBlock {
       width: 65%;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px; }
+
+  .singleItem {
+    display: block; }
+    .singleItem > .singleItemImg {
+      margin: auto;
+      margin-bottom: 20px; }
+    .singleItem > .singleItemDescription {
+      padding: 0px 10px 0px 10px; } }
 @media screen and (max-width: 650px) {
   header {
     height: 175px; }

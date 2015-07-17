@@ -224,15 +224,22 @@ MENU HEADER
 DETAIL MENU ITEM
 **************************/
 
+.singleItemHeader{
+  >h1{
+    margin-top: 110px;
+  }
+}
+
 .singleItem{
   width: 90%;
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  height: 250px;
-  margin: 20px;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 2px solid $c2;
   padding: 10px 15px 10px 15px;
 
@@ -241,10 +248,12 @@ DETAIL MENU ITEM
   }
   > .singleItemImg{
     flex-grow: 1;
-    justify-content: center;
+    width:200px;
+    height:200px;
 
     >img{
-      max-width: 200px;
+      display:block;
+      max-width: 100%;
       max-height: 200px;
       width: auto;
       height: auto;
@@ -276,6 +285,7 @@ SINGLE MENU ITEM
   width:90%;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 50px;
 
   >h1{
     text-align: center;
@@ -334,6 +344,18 @@ QUERIES
     .restaurantBlock {
       width: 65%;
       margin-bottom: 25px;
+    }
+  }
+  .singleItem{
+    display:block;
+
+    >.singleItemImg{
+      margin:auto;
+      margin-bottom: 20px;
+    }
+
+    >.singleItemDescription{
+      padding: 0px 10px 0px 10px;
     }
   }
 }
