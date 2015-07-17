@@ -193,10 +193,10 @@ DETAIL MENU ITEM
 
 .singleItemEdit {
   position: relative;
-  width: 90%;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-bottom: 25px;
   border: 2px solid #980000;
   background-color: #980000;
   color: #DCFA7C;
@@ -244,11 +244,21 @@ DETAIL MENU ITEM
         .singleItemEdit #updateItemForm > div > input:focus,
         .singleItemEdit #updateItemForm > div > textarea:focus {
           outline: 0; }
+      .singleItemEdit #updateItemForm > div > textarea {
+        max-width: 100%; }
       .singleItemEdit #updateItemForm > div > label {
         background-color: #980000;
         position: absolute;
         left: 2.5%;
         top: -17.5px; }
+
+.alertItem {
+  display: none;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  padding: 10px 0; }
 
 /**************************
 SINGLE MENU ITEM
@@ -313,20 +323,6 @@ SINGLE MENU ITEM
     .singleMenuItem > .singleMenuItemDescription > a {
       width: 5%;
       text-align: center; }
-
-.startOpacity {
-  opacity: 0; }
-
-.endOpacity {
-  opacity: 1; }
-
-.alertItem {
-  position: absolute;
-  top: 40%;
-  width: 100%; }
-
-.hide {
-  display: none; }
 
 /**************************
 QUERIES
