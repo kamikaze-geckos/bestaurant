@@ -195,6 +195,7 @@ DETAIL MENU ITEM
   float: right; }
 
 .singleItemEdit {
+  position: relative;
   width: 90%;
   margin: auto;
   margin-top: 30px;
@@ -307,6 +308,17 @@ SINGLE MENU ITEM
     .singleMenuItem > .singleMenuItemDescription > a {
       width: 5%;
       text-align: center; }
+
+.startOpacity {
+  opacity: 0; }
+
+.endOpacity {
+  opacity: 1; }
+
+.alertItem {
+  position: absolute;
+  top: 40%;
+  width: 100%; }
 
 .hide {
   display: none; }

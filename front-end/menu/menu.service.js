@@ -18,6 +18,10 @@
       };
 
       var addItem = function(newItem){
+        $('.alertItem').removeClass('startOpacity').addClass('endOpacity');
+        setTimeout(function(){
+          $('.alertItem').fadeIn().removeClass('endOpacity').addClass('startOpacity');
+        }, 1000);
         $http.post(url, newItem).success(function(resp){
           $rootScope.$broadcast('item:added');
           console.log("new item added");

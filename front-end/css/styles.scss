@@ -286,6 +286,7 @@ DETAIL MENU ITEM
 }
 
 .singleItemEdit {
+  position:relative;
   width: 90%;
   margin:auto;
   margin-top: 30px;
@@ -437,6 +438,20 @@ SINGLE MENU ITEM
       text-align: center;
     }
   }
+}
+
+.startOpacity{
+  opacity: 0;
+}
+
+.endOpacity{
+  opacity: 1;
+}
+
+.alertItem{
+  position: absolute;
+  top:40%;
+  width: 100%;
 }
 
 
