@@ -308,6 +308,8 @@ SINGLE MENU ITEM
   border-left: 0px;
   border-right: 0px;
   padding: 15px;
+  overflow: hidden;
+
   > .singleMenuItemDescription{
     padding-left: 30px;
     flex-grow: 4;
@@ -323,6 +325,9 @@ SINGLE MENU ITEM
       text-align: justify;
       width: 100%;
       font-size: 0.75em;
+    }
+    >.fa-trash-o{
+      float:right;
     }
   }
 }
