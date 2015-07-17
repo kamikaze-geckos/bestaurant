@@ -246,6 +246,7 @@ DETAIL MENU ITEM
   margin-bottom: 30px;
   border: 2px solid $c2;
   padding: 10px 15px 10px 15px;
+  overflow: hidden;
 
   >div{
     flex-basis:0;
@@ -279,6 +280,21 @@ DETAIL MENU ITEM
       width: 100%;
     }
   }
+}
+
+.editItemLink{
+  font-size: 0.6em;
+  float:right;
+}
+
+.singleItemEdit{
+  width: 90%;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid $c2;
+  padding: 10px 15px 10px 15px;
+  overflow: hidden;
 }
 
 /**************************
@@ -330,6 +346,11 @@ SINGLE MENU ITEM
       float:right;
     }
   }
+}
+
+
+.hide{
+  display: none;
 }
 
 

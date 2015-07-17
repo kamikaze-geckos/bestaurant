@@ -8,8 +8,10 @@
         $scope.items = items;
       });
 
-      if($routeParams.item_id){
-        MenuService.getItem($routeParams.item_id).success(function(item){
+      if($routeParams.itemId){
+        console.log($routeParams.itemId);
+        MenuService.getItem($routeParams.itemId).success(function(item){
+          console.log(item);
           $scope.item = item;
         });
       };
@@ -18,12 +20,14 @@
         MenuService.addItem(newItem);
       };
 
-      $scope.deleteItem = function(item_id){
-        MenuService.deleteItem(item_id);
+      $scope.deleteItem = function(id){
+        MenuService.deleteItem(id);
       };
 
-      $scope.editItem = function(item_id, updatedItem){
-        MenuService.editItem(item_id, updatedItem);
+      $scope.updatedItem ={};
+
+      $scope.editItem = function(id, updatedItem){
+        MenuService.editItem(id, updatedItem);
       };
 
       $scope.sortName = 'id';
@@ -34,6 +38,20 @@
         $(el).css('text-decoration', 'underline');
         $scope.sortName = sortSelected;
       };
+
+      $scope.toggleUpdateItem = function($event){
+        console.log($event.target);
+      };
+
+      var watchCallback = function () {
+          MenuService.getMenu().success(function (items) {
+            $scope.items = items;
+          });
+        };
+
+      $scope.$on('item:deleted', watchCallback);
+      $scope.$on('item:added', watchCallback);
+      $scope.$on('item:edited', watchCallback);
 
       //FAKE DATA
       // var items = [
