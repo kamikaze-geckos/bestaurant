@@ -19,7 +19,6 @@
 
 <div class="menu">
   <h2>Menu</h2>
-
   <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
     <div class="singleMenuItemDescription">
       <div>
@@ -34,5 +33,33 @@
       <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
     </div>
   </div>
+</div>
 
+<div class="singleItemEdit">
+  <h2>Add an Item</h2>
+  <form id="updateItemForm" novalidate>
+    <div>
+      <input type="text" name="name" ng-model="newItem.name" required>
+      <label for="name">Name</label>
+    </div>
+    <div>
+      <input type="text" name="price" ng-model="newItem.price" required>
+      <label for="price">Price</label>
+    </div>
+    <div>
+      <input type="text" name="category" ng-model="newItem.category">
+      <label for="category">Category</label>
+    </div>
+    <div>
+      <input type="text" name="pic" ng-model="newItem.pic">
+      <label for="pic">Image</label>
+    </div>
+    <div>
+      <textarea name="description" rows="8" cols="40" ng-model="newItem.description"></textarea>
+      <label for="description">Description</label>
+    </div>
+    <div>
+      <input type="submit" name="submitButton" value="Add" ng-click="addItem(newItem)">
+    </div>
+  </form>
 </div>
