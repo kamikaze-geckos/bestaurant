@@ -10,12 +10,15 @@
     <img ng-src="{{item.pic}}"/>
   </div>
   <div class="singleItemDescription">
-    <ul>
-      <li><h3>{{item.name}}</h3></li>
-      <li><h4>{{item.price | currency}}</h4></li>
-    </ul>
-    <p>{{item.description}}</p>
-    <a href="" class="editItemLink" ng-click="toggleUpdateItem"><i class="fa fa-wrench"></i> Update Item</a>
+    <div>
+      {{item.name}}
+    </div>
+    <div>
+      {{item.description}}
+    </div>
+    <div>
+      {{item.price | currency}}
+    </div>
   </div>
 </div>
 <div class="singleItemEdit">
