@@ -4,14 +4,14 @@
   </div>
   <div>
     <div>
-      <input type="text" id="itemFilter" name="itemFilter">
+      <input type="text" id="itemFilter" name="itemFilter" ng-model="searchFilter">
       <label for="itemFilter">Search Menu</label>
     </div>
   </div>
   <ul class="menuSort">
     <li>Sort by: </li>
-    <li><a href="#">Price (low to high) </a> |</li>
-    <li> <a href="#"> Name (A - Z) </a> |</li>
-    <li> <a href="#"> Category</a></li>
+    <li><a href="" ng-click="selectSort('price')">Price (low to high) </a> |</li>
+    <li> <a href="" ng-click="selectSort('name')"> Name (A - Z) </a> |</li>
+    <li> <a href="" ng-click="selectSort('category')"> Category</a></li>
   </ul>
 </header>
