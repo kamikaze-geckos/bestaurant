@@ -239,11 +239,8 @@ DETAIL MENU ITEM
 }
 
 .singleItem{
-  width: 90%;
   height: 150px;
   background-color: white;
-  margin:auto;
-  margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid $c2;
   overflow: hidden;
@@ -286,8 +283,6 @@ DETAIL MENU ITEM
 }
 
 .singleItemEdit {
-  width: 90%;
-  margin:auto;
   margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid $c2;
@@ -369,24 +364,28 @@ DETAIL MENU ITEM
 SINGLE MENU ITEM
 **************************/
 
-.menu{
-  width:90%;
+.menuTitle {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  background-color: $c3;
+  color: $c2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 2px solid $c2;
+  border-bottom: none;
+}
+
+.menu {
+  height: 600px;
+  overflow: scroll;
   background-color: white;
   border: 2px solid $c2;
+  border-top: none;
   margin: auto;
-  margin-top: 30px;
   margin-bottom: 50px;
-
-  >h2 {
-    font-size: 1.5rem;
-    background-color: $c3;
-    color: $c2;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    text-align: center;
-    font-weight: lighter;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
 }
 
 .subMenu{

@@ -4,48 +4,50 @@
   </div>
 </header>
 
-<a href="#/restaurant_id/">Back to Menu</a>
-<div class="singleItem">
-  <div class="singleItemImg" ng-if="item.pic">
-    <img ng-src="{{item.pic}}"/>
+<div class="pageWrapper">
+  <a href="#/restaurant_id/">Back to Menu</a>
+  <div class="singleItem">
+    <div class="singleItemImg" ng-if="item.pic">
+      <img ng-src="{{item.pic}}"/>
+    </div>
+    <div class="singleItemDescription">
+      <div>
+        {{item.name}}
+      </div>
+      <div>
+        {{item.description}}
+      </div>
+      <div>
+        {{item.price | currency}}
+      </div>
+    </div>
   </div>
-  <div class="singleItemDescription">
-    <div>
-      {{item.name}}
-    </div>
-    <div>
-      {{item.description}}
-    </div>
-    <div>
-      {{item.price | currency}}
-    </div>
+  <div class="singleItemEdit">
+    <h2>Update Item</h2>
+    <form id="updateItemForm" novalidate>
+      <div>
+        <input type="text" name="name" ng-model="updatedItem.name" required>
+        <label for="name">Name</label>
+      </div>
+      <div>
+        <input type="text" name="price" ng-model="updatedItem.price | currency" required>
+        <label for="price">Price</label>
+      </div>
+      <div>
+        <input type="text" name="category" ng-model="updatedItem.category">
+        <label for="category">Category</label>
+      </div>
+      <div>
+        <input type="text" name="pic" ng-model="updatedItem.pic">
+        <label for="pic">Image</label>
+      </div>
+      <div>
+        <textarea name="description" rows="8" cols="40" ng-model="updatedItem.description"></textarea>
+        <label for="description">Description</label>
+      </div>
+      <div>
+        <input type="submit" name="submitButton" value="Submit Changes">
+      </div>
+    </form>
   </div>
-</div>
-<div class="singleItemEdit">
-  <h2>Update Item</h2>
-  <form id="updateItemForm" novalidate>
-    <div>
-      <input type="text" name="name" ng-model="updatedItem.name" required>
-      <label for="name">Name</label>
-    </div>
-    <div>
-      <input type="text" name="price" ng-model="updatedItem.price | currency" required>
-      <label for="price">Price</label>
-    </div>
-    <div>
-      <input type="text" name="category" ng-model="updatedItem.category">
-      <label for="category">Category</label>
-    </div>
-    <div>
-      <input type="text" name="pic" ng-model="updatedItem.pic">
-      <label for="pic">Image</label>
-    </div>
-    <div>
-      <textarea name="description" rows="8" cols="40" ng-model="updatedItem.description"></textarea>
-      <label for="description">Description</label>
-    </div>
-    <div>
-      <input type="submit" name="submitButton" value="Submit Changes">
-    </div>
-  </form>
 </div>
