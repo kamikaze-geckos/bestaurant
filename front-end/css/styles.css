@@ -30,6 +30,9 @@ html {
   font-family: "Roboto Slab", serif;
   color: #212121; }
 
+body {
+  background-image: url("../restaurant-bg.png"); }
+
 html, body {
   height: 100%;
   width: 100%; }
@@ -153,17 +156,18 @@ DETAIL MENU ITEM
 
 .singleItem {
   width: 90%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
+  background-color: white;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid #980000;
   padding: 10px 15px 10px 15px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row; }
   .singleItem > div {
     flex-basis: 0; }
   .singleItem > .singleItemImg {
@@ -200,17 +204,65 @@ DETAIL MENU ITEM
   margin-bottom: 30px;
   border: 2px solid #980000;
   padding: 10px 15px 10px 15px;
+  background-color: #980000;
+  color: #DCFA7C;
   overflow: hidden; }
+  .singleItemEdit h2 {
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 25px;
+    margin-bottom: 35px; }
+  .singleItemEdit #updateItemForm {
+    width: 60%;
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
+    .singleItemEdit #updateItemForm > div:last-of-type {
+      padding: 0; }
+    .singleItemEdit #updateItemForm > div {
+      position: relative;
+      border: 2px solid #DCFA7C;
+      margin-bottom: 25px;
+      padding: 10px; }
+      .singleItemEdit #updateItemForm > div > input[type=submit] {
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease; }
+        .singleItemEdit #updateItemForm > div > input[type=submit]:hover {
+          background-color: #DCFA7C;
+          color: #980000; }
+      .singleItemEdit #updateItemForm > div > input {
+        text-align: center; }
+      .singleItemEdit #updateItemForm > div > label {
+        font-family: "Roboto Slab", serif; }
+      .singleItemEdit #updateItemForm > div > input,
+      .singleItemEdit #updateItemForm > div > textarea {
+        width: 100%;
+        background-color: #980000;
+        border: none;
+        font-size: 1.25rem; }
+        .singleItemEdit #updateItemForm > div > input:focus,
+        .singleItemEdit #updateItemForm > div > textarea:focus {
+          outline: 0; }
+      .singleItemEdit #updateItemForm > div > label {
+        background-color: #980000;
+        position: absolute;
+        left: 2.5%;
+        top: -17.5px; }
 
 /**************************
 SINGLE MENU ITEM
 **************************/
 .menu {
   width: 90%;
+  background-color: white;
+  border: 2px solid #980000;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px; }
   .menu > h1 {
+    background-color: #980000;
+    color: #DCFA7C;
     text-align: center;
     border: 2px solid #980000;
     border-top: 0px;
@@ -226,6 +278,8 @@ SINGLE MENU ITEM
   border-right: 0px;
   padding: 15px;
   overflow: hidden; }
+  .singleMenuItem:last-of-type {
+    border-bottom: 0; }
   .singleMenuItem > .singleMenuItemDescription {
     padding-left: 30px;
     flex-grow: 4; }
