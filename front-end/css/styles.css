@@ -251,7 +251,8 @@ DETAIL MENU ITEM
 SINGLE MENU ITEM
 **************************/
 .menuTitle {
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
   font-size: 1.5rem;
   background-color: #DCFA7C;
   color: #980000;
@@ -264,9 +265,11 @@ SINGLE MENU ITEM
   border-bottom: none; }
 
 .menu {
+  position: relative;
+  z-index: 0;
   height: 600px;
-  overflow: scroll;
   background-color: white;
+  overflow: scroll;
   border: 2px solid #980000;
   border-top: none;
   margin: auto;
