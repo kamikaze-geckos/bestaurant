@@ -12,7 +12,7 @@
         })
 
         .when('/restaurant_id/item_id', {
-          templateUrl: 'menu/views/item.html',
+          templateUrl: 'menu/views/detailItem.html',
           controller: 'MenuController'
         })
     });
