@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  root 'items#index'
+  namespace :api do
+    with_options except: [:new, :edit] do |r|
+      r.resources :items
+      r.resources :restaurants
+      r.resources :menus
+    end
+  end
 end
