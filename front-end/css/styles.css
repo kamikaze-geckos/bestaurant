@@ -86,6 +86,8 @@ header {
         left: 2.5%;
         top: -17.5px;
         background-color: #980000; }
+      header > div div .menuLabel {
+        width: 135px; }
 
 /**************************
 CATALOG

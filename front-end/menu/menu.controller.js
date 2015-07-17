@@ -28,9 +28,11 @@
 
       $scope.sortName = 'id';
 
-      $scope.selectSort = function(sortSelected){
+      $scope.selectSort = function(sortSelected, $event){
+        var el = $event.target;
+        $(el).parent().siblings().children().css('text-decoration', 'none');
+        $(el).css('text-decoration', 'underline');
         $scope.sortName = sortSelected;
-        $rootScope.$broadcast('sorter:updated');
       };
 
       //FAKE DATA
