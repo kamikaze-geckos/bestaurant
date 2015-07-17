@@ -19,7 +19,8 @@
       };
 
       $scope.deleteItem = function(item_id){
-        MenuService.deleteItem(item_id);
+        console.log(item_id);
+        // MenuService.deleteItem(item_id);
       };
 
       $scope.editItem = function(item_id, updatedItem){
