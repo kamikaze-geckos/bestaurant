@@ -20,7 +20,7 @@
   <a href="#/restaurants">Back to Restaurants</a>
 
   <h2 class="menuTitle">Menu</h2>
-  <div class="menu" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+  <div class="menu">
     <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
       <div class="singleMenuItemDescription">
         <div>
@@ -62,6 +62,7 @@
       </div>
       <div>
         <input type="submit" name="submitButton" value="Add" ng-click="addItem(newItem)">
+        <div class="alertItem"><h3>Item Added</h3></div>
       </div>
     </form>
   </div>
