@@ -162,7 +162,8 @@ DETAIL MENU ITEM
   margin-top: 30px;
   margin-bottom: 30px;
   border: 2px solid #980000;
-  padding: 10px 15px 10px 15px; }
+  padding: 10px 15px 10px 15px;
+  overflow: hidden; }
   .singleItem > div {
     flex-basis: 0; }
   .singleItem > .singleItemImg {
@@ -187,6 +188,19 @@ DETAIL MENU ITEM
     .singleItem > .singleItemDescription > p {
       text-align: justify;
       width: 100%; }
+
+.editItemLink {
+  font-size: 0.6em;
+  float: right; }
+
+.singleItemEdit {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #980000;
+  padding: 10px 15px 10px 15px;
+  overflow: hidden; }
 
 /**************************
 SINGLE MENU ITEM
@@ -227,6 +241,9 @@ SINGLE MENU ITEM
       font-size: 0.75em; }
     .singleMenuItem > .singleMenuItemDescription > .fa-trash-o {
       float: right; }
+
+.hide {
+  display: none; }
 
 /**************************
 QUERIES

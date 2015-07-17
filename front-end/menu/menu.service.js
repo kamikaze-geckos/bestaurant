@@ -3,35 +3,39 @@
   angular
     .module('menu')
     .factory('MenuService', function($http, $rootScope){
-      var url = 'http://10.0.10.130:3000/api/items.json';
+      var url = 'http://10.0.10.130:3000/api/items';
 
       var getMenu = function(restaurant_id){
-        return $http.get(url).success(function(data){
+        return $http.get(url + '.json').success(function(data){
           console.log(data);
           return data;
         })
       };
 
-      var getItem = function(item_id){
-        return $http.get(url + '/' + item_id).success(function(item){
+      var getItem = function(id){
+        return $http.get(url + '/' + id + '.json').success(function(item){
+          console.log(item);
           return item;
         })
       };
 
       var addItem = function(newItem){
         $http.post(url, newItem).success(function(resp){
+          $rootScope.$broadcast('item:added');
           console.log("new item added");
         });
       };
 
-      var deleteItem = function(item_id){
-        $http.delete(url + '/' + item_id).success(function(resp){
+      var deleteItem = function(id){
+        $http.delete(url + '/' + id).success(function(resp){
+          $rootScope.$broadcast('item:deleted');
           console.log("item deleted");
         });
       };
 
-      var editItem = function(item_id, updatedItem){
-        $http.put(url + '/' + item_id, updatedItem).success(function(resp){
+      var editItem = function(id, updatedItem){
+        $http.put(url + '/' + id, updatedItem).success(function(resp){
+          $rootScope.$broadcast('item:edited');
           console.log("item updated");
         });
       };
