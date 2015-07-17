@@ -208,7 +208,8 @@ SINGLE MENU ITEM
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  padding: 15px; }
+  padding: 15px;
+  overflow: hidden; }
   .singleMenuItem > .singleMenuItemDescription {
     padding-left: 30px;
     flex-grow: 4; }
@@ -222,6 +223,8 @@ SINGLE MENU ITEM
       text-align: justify;
       width: 100%;
       font-size: 0.75em; }
+    .singleMenuItem > .singleMenuItemDescription > .fa-trash-o {
+      float: right; }
 
 /**************************
 QUERIES

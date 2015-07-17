@@ -3,10 +3,11 @@
   angular
     .module('menu')
     .factory('MenuService', function($http, $rootScope){
-      var url = 'http://localhost:3000';
+      var url = 'http://10.0.10.130:3000/api/items.json';
 
       var getMenu = function(restaurant_id){
-        return $http.get(url + '/' + restaurant_id).success(function(data){
+        return $http.get(url).success(function(data){
+          console.log(data);
           return data;
         })
       };
