@@ -20,15 +20,45 @@
 <div class="menu">
   <h2>Menu</h2>
 
-  <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
-    <div class="singleMenuItemDescription">
-      <ul>
-        <li><h2><a href="#/restaurant_id/{{item.id}}">{{item.name}}</a></h2></li>
-        <li><h4>{{item.price | currency}}</h4></li>
-      </ul>
-      <p>{{item.description}}</p>
-      <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
+  <div class="subMenu">
+    <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
+      <div class="singleMenuItemDescription">
+        <ul>
+          <li><h2><a href="#/restaurant_id/{{item.id}}">{{item.name}}</a></h2></li>
+          <li><h4>{{item.price | currency}}</h4></li>
+        </ul>
+        <p>{{item.description}}</p>
+        <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
+      </div>
     </div>
   </div>
+</div>
 
+<div class="singleItemEdit">
+  <h2>Add an Item</h2>
+  <form id="updateItemForm" novalidate>
+    <div>
+      <input type="text" name="name" ng-model="newItem.name" required>
+      <label for="name">Name</label>
+    </div>
+    <div>
+      <input type="text" name="price" ng-model="newItem.price" required>
+      <label for="price">Price</label>
+    </div>
+    <div>
+      <input type="text" name="category" ng-model="newItem.category">
+      <label for="category">Category</label>
+    </div>
+    <div>
+      <input type="text" name="pic" ng-model="newItem.pic">
+      <label for="pic">Image</label>
+    </div>
+    <div>
+      <textarea name="description" rows="8" cols="40" ng-model="newItem.description"></textarea>
+      <label for="description">Description</label>
+    </div>
+    <div>
+      <input type="submit" name="submitButton" value="Add" ng-click="addItem(newItem)">
+    </div>
+  </form>
 </div>

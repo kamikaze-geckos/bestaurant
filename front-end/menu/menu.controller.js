@@ -4,7 +4,10 @@
     .module('menu')
     .controller('MenuController', function($scope, _, MenuService, $routeParams){
 
+      $scope.updatedItem ={};
+
       MenuService.getMenu().success(function(items){
+        console.log(items);
         $scope.items = items;
       });
 
@@ -13,6 +16,7 @@
         MenuService.getItem($routeParams.itemId).success(function(item){
           console.log(item);
           $scope.item = item;
+          $scope.updatedItem = item;
         });
       };
 
@@ -24,10 +28,12 @@
         MenuService.deleteItem(id);
       };
 
-      $scope.updatedItem ={};
 
       $scope.editItem = function(id, updatedItem){
+        console.log("edit");
+        console.log(updatedItem);
         MenuService.editItem(id, updatedItem);
+        updatedItem = {};
       };
 
       $scope.sortName = 'id';
@@ -39,9 +45,6 @@
         $scope.sortName = sortSelected;
       };
 
-      $scope.toggleUpdateItem = function($event){
-        console.log($event.target);
-      };
 
       var watchCallback = function () {
           MenuService.getMenu().success(function (items) {
