@@ -19,17 +19,18 @@
 
 <div class="menu">
   <h2>Menu</h2>
-
-  <div class="subMenu">
-    <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
-      <div class="singleMenuItemDescription">
-        <ul>
-          <li><h2><a href="#/restaurant_id/{{item.id}}">{{item.name}}</a></h2></li>
-          <li><h4>{{item.price | currency}}</h4></li>
-        </ul>
-        <p>{{item.description}}</p>
-        <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
+  <div class="singleMenuItem" ng-repeat="item in items | orderBy:sortName | filter:searchFilter">
+    <div class="singleMenuItemDescription">
+      <div>
+        <a href="#/restaurant_id/{{item.id}}">{{item.name}}</a>
       </div>
+      <div>
+        {{item.description}}
+      </div>
+      <div>
+        {{item.price | currency}}
+      </div>
+      <a href="" ng-click="deleteItem(item.id)"<i class="fa fa-trash-o"></i></a>
     </div>
   </div>
 </div>

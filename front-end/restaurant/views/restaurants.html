@@ -11,12 +11,11 @@
 </header>
 
 <div class="pageWrapper">
-<a href="#/restaurant_id">To Menu</a>
 
   <div class="catalog">
     <div class="restaurantBlock" ng-repeat="restaurant in restaurants | filter:search:strict" ng-model="search">
       <img ng-src="{{ restaurant.image }}">
-      <a href="#/restaurants/whatever">
+      <a href="#/restaurant_id">
         <div class="restaurantInfo">
           <div class="restaurantTitle">
             <h2>{{ restaurant.name }}</h2>

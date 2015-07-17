@@ -279,6 +279,7 @@ SINGLE MENU ITEM
 .singleMenuItem {
   margin: auto;
   width: 90%;
+  height: 150px;
   border: 2px solid #980000;
   border-top: 0px;
   border-left: 0px;
@@ -288,20 +289,24 @@ SINGLE MENU ITEM
   .singleMenuItem:last-of-type {
     border-bottom: 0; }
   .singleMenuItem > .singleMenuItemDescription {
-    padding-left: 30px;
-    flex-grow: 4; }
-    .singleMenuItem > .singleMenuItemDescription > ul {
-      display: flex;
-      justify-content: space-between;
-      width: 100%; }
-      .singleMenuItem > .singleMenuItemDescription > ul > li {
-        display: inline-block; }
-    .singleMenuItem > .singleMenuItemDescription > p {
-      text-align: justify;
-      width: 100%;
-      font-size: 0.75em; }
-    .singleMenuItem > .singleMenuItemDescription > .fa-trash-o {
-      float: right; }
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .singleMenuItem > .singleMenuItemDescription > div {
+      text-align: center;
+      width: 20%;
+      font-size: 1.35rem; }
+    .singleMenuItem > .singleMenuItemDescription > div:nth-of-type(2) {
+      text-align: left;
+      padding: 0 20px;
+      width: 60%;
+      font-size: 0.8rem; }
+    .singleMenuItem > .singleMenuItemDescription > div:last-of-type {
+      width: 15%; }
+    .singleMenuItem > .singleMenuItemDescription > a {
+      width: 5%;
+      text-align: center; }
 
 .hide {
   display: none; }
