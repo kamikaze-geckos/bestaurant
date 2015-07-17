@@ -207,6 +207,128 @@ CATALOG
 }
 
 /**************************
+MENU HEADER
+**************************/
+
+.menuSort{
+  margin:auto;
+  padding-bottom: 15px;
+
+  >li{
+    display:inline-block;
+    font-size: 0.75em;
+
+    >a{
+    color: $c3;
+  }
+  }
+}
+
+/**************************
+DETAIL MENU ITEM
+**************************/
+
+.singleItemHeader{
+  >h1{
+    margin-top: 110px;
+  }
+}
+
+.singleItem{
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid $c2;
+  padding: 10px 15px 10px 15px;
+
+  >div{
+    flex-basis:0;
+  }
+  > .singleItemImg{
+    flex-grow: 1;
+    width:200px;
+    height:200px;
+
+    >img{
+      display:block;
+      max-width: 100%;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+    }
+  }
+  > .singleItemDescription{
+    padding-left: 30px;
+    flex-grow: 4;
+    >ul{
+      display:flex;
+      justify-content: space-between;
+      width: 100%;
+      >li{
+        display:inline-block;
+      }
+    }
+    >p{
+      text-align: justify;
+      width: 100%;
+    }
+  }
+}
+
+/**************************
+SINGLE MENU ITEM
+**************************/
+
+.menu{
+  width:90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  >h1{
+    text-align: center;
+    border: 2px solid $c2;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+.singleMenuItem{
+  margin:auto;
+  width: 90%;
+  border: 2px solid $c2;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 15px;
+  > .singleMenuItemDescription{
+    padding-left: 30px;
+    flex-grow: 4;
+    >ul{
+      display:flex;
+      justify-content: space-between;
+      width: 100%;
+      >li{
+        display:inline-block;
+      }
+    }
+    >p{
+      text-align: justify;
+      width: 100%;
+      font-size: 0.75em;
+    }
+  }
+}
+
+
+/**************************
 QUERIES
 **************************/
 
@@ -226,6 +348,18 @@ QUERIES
     .restaurantBlock {
       width: 65%;
       margin-bottom: 25px;
+    }
+  }
+  .singleItem{
+    display:block;
+
+    >.singleItemImg{
+      margin:auto;
+      margin-bottom: 20px;
+    }
+
+    >.singleItemDescription{
+      padding: 0px 10px 0px 10px;
     }
   }
 }

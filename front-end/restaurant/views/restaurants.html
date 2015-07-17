@@ -11,6 +11,8 @@
 </header>
 
 <div class="pageWrapper">
+<a href="#/restaurant_id">To Menu</a>
+
   <div class="catalog">
     <div class="restaurantBlock" ng-repeat="restaurant in restaurants | filter:search:strict" ng-model="search">
       <img ng-src="{{ restaurant.image }}">
