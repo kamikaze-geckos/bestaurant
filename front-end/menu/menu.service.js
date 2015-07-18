@@ -3,7 +3,7 @@
   angular
     .module('menu')
     .factory('MenuService', function($http, $rootScope){
-      var url = 'http://10.0.10.130:3000/api/items';
+      var url = 'http://kamikaze-geckos.herokuapp.com/api/items';
 
       var getMenu = function(restaurant_id){
         return $http.get(url + '.json').success(function(data){
