@@ -14,17 +14,43 @@
 
   <div class="catalog">
     <div class="restaurantBlock" ng-repeat="restaurant in restaurants | filter:search:strict" ng-model="search">
-      <img ng-src="{{ restaurant.image }}">
-      <a href="#/restaurant_id">
+      <img ng-if="restaurant.pic" ng-src="{{ restaurant.pic }}"/>
+      <img ng-if="!restaurant.pic" src="http://lorempixel.com/480/400/food/2/"/>
+      <a href="#/{{restaurant.id}}" ng-click="">
         <div class="restaurantInfo">
           <div class="restaurantTitle">
             <h2>{{ restaurant.name }}</h2>
           </div>
           <div class="restaurantDescription">
-            {{ restaurant.description }}
+            {{ restaurant.cuisine }}
           </div>
         </div>
       </a>
     </div>
+  </div>
+  <div class="singleItemEdit">
+    <h2>Add a Restaurant</h2>
+    <form id="updateItemForm" novalidate>
+      <div>
+        <input type="text" name="name" ng-model="newRestaurant.name" required>
+        <label for="name">Name</label>
+      </div>
+      <div>
+        <input type="text" name="location" ng-model="newRestaurant.location" required>
+        <label for="location">Location</label>
+      </div>
+      <div>
+        <input type="text" name="cuisine" ng-model="newRestaurant.cuisine">
+        <label for="cuisine">Cuisine</label>
+      </div>
+      <div>
+        <input type="text" name="pic" ng-model="newRestaurant.pic">
+        <label for="pic">Image</label>
+      </div>
+      <div>
+        <input type="submit" name="submitButton" value="Add" ng-click="addRestaurant(newRestaurant)">
+        <div class="alertItem"><h3>Restaurant Added</h3></div>
+      </div>
+    </form>
   </div>
 </div>

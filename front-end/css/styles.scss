@@ -239,7 +239,6 @@ DETAIL MENU ITEM
 }
 
 .singleItem{
-  height: 150px;
   background-color: white;
   margin-bottom: 30px;
   border: 2px solid $c2;
@@ -254,6 +253,7 @@ DETAIL MENU ITEM
     flex-grow: 1;
     width:200px;
     height:200px;
+    padding:10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,10 +270,11 @@ DETAIL MENU ITEM
     height: 100%;
     width: 100%;
     font-size: 1.5rem;
-    padding: 0 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px;
+
+    >div>p{
+      font-size: 0.6em;
+    }
   }
 }
 

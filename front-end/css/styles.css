@@ -155,7 +155,6 @@ DETAIL MENU ITEM
   margin-top: 110px; }
 
 .singleItem {
-  height: 150px;
   background-color: white;
   margin-bottom: 30px;
   border: 2px solid #980000;
@@ -169,6 +168,7 @@ DETAIL MENU ITEM
     flex-grow: 1;
     width: 200px;
     height: 200px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -182,10 +182,9 @@ DETAIL MENU ITEM
     height: 100%;
     width: 100%;
     font-size: 1.5rem;
-    padding: 0 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    padding: 10px; }
+    .singleItem > .singleItemDescription > div > p {
+      font-size: 0.6em; }
 
 .editItemLink {
   font-size: 0.6em;

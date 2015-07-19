@@ -5,7 +5,8 @@
     .factory('MenuService', function($http, $rootScope){
       var url = 'http://kamikaze-geckos.herokuapp.com/api/items';
 
-      var getMenu = function(restaurant_id){
+      var getMenu = function(restaurantId){
+        console.log("I am getMENU");
         return $http.get(url + '.json').success(function(data){
           return data;
         })

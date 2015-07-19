@@ -2,32 +2,56 @@
   'use strict';
   angular
     .module('bestaurant')
-    .controller('RestaurantController', function($scope, $route) {
+    .controller('RestaurantController', function($scope, $route, RestaurantService, $routeParams) {
       $scope.$route = $route;
 
-      var restaurants = [
-        {
-          name: 'McDonald\'s',
-          description: 'A million burgers sold!',
-          image: 'http://lorempixel.com/500/500/food/1/'
-        },
-        {
-          name: 'Burger King',
-          description: 'It tastes disgusting!',
-          image: 'http://lorempixel.com/500/500/food/2/'
-        },
-        {
-          name: 'Wendy\'s',
-          description: 'Square means we care!',
-          image: 'http://lorempixel.com/500/500/food/3/'
-        },
-        {
-          name: 'Five Guys',
-          description: 'Overpriced as fuck!',
-          image: 'http://lorempixel.com/500/500/food/4/'
-        },
-      ]
+      $scope.updatedRestaurant ={};
 
-      $scope.restaurants = restaurants;
+      RestaurantService.getRestaurants().success(function(data){
+        console.log(data);
+        $scope.restaurants = data;
+      });
+
+      if($routeParams.restaurantId){
+        console.log($routeParams.restaurantId);
+        RestaurantService.getRestaurant($routeParams.restaurantId).success(function(restaurant){
+          console.log(restaurant);
+          $scope.restaurant = restaurant;
+          $scope.updatedRestaurant = restaurant;
+        });
+      };
+
+      $scope.newRestaurant = {};
+
+      $scope.addRestaurant = function(newRestaurant){
+        console.log(newRestaurant);
+        $('.alertItem').fadeIn('slow').fadeOut('slow');
+        RestaurantService.addRestaurant(newRestaurant);
+        $scope.newRestaurant = {};
+      };
+
+      $scope.deleteRestaurant = function(id){
+        console.log("delete");
+        RestaurantService.deleteRestaurant(id);
+      };
+
+
+      $scope.editRestaurant = function(id, updatedRestaurant){
+        $('.alertItem').fadeIn('slow').fadeOut('slow');
+        console.log("edit");
+        console.log(updatedRestaurant);
+        RestaurantService.editRestaurant(id, updatedRestaurant);
+      };
+
+      var watchCallback = function () {
+          RestaurantService.getRestaurants().success(function (restaurants) {
+            $scope.restaurants = restaurants;
+          });
+        };
+
+      $scope.$on('restaurant:deleted', watchCallback);
+      $scope.$on('restaurant:added', watchCallback);
+      $scope.$on('restaurant:edited', watchCallback);
+
     })
 })();

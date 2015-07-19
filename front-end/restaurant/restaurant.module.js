@@ -1,5 +1,11 @@
 (function() {
   'use strict';
   angular
-    .module('bestaurant')
+    .module('restaurant', [
+      'ngRoute'
+    ])
+    .config(function($routeProvider){
+      $routeProvider
+
+    });
 })();

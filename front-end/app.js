@@ -4,7 +4,8 @@
     .module('bestaurant', [
       'ngRoute',
       'underscore',
-      'menu'
+      'menu',
+      'restaurant'
     ])
     .config(function ($routeProvider) {
       $routeProvider
@@ -15,10 +16,21 @@
           templateUrl: 'restaurant/views/restaurants.html',
           controller: 'RestaurantController'
         })
-        .when('/restaurants/:title', {
+        .when('/editRestaurant', {
+          templateUrl: 'restaurant/views/editRestaurant.html',
+          controller: 'RestaurantController'
+        })
+        .when('/:restaurantId', {
           templateUrl: 'menu/views/menu.html',
           controller: 'MenuController'
         })
+
+        .when('/:restaurantId/:itemId', {
+          templateUrl: 'menu/views/detailItem.html',
+          controller: 'MenuController'
+        })
+
+
     })
   angular
     .module('underscore', [])
