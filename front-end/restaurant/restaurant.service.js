@@ -20,21 +20,18 @@
       var addRestaurant = function(newRestaurant){
         $http.post(url + '.json', newRestaurant).success(function(resp){
           $rootScope.$broadcast('restaurant:added');
-          console.log("new restaurant added");
         });
       };
 
       var deleteRestaurant = function(id){
         $http.delete(url + '/' + id + '.json').success(function(resp){
           $rootScope.$broadcast('restaurant:deleted');
-          console.log("restaurant deleted");
         });
       };
 
       var editRestaurant = function(id, updatedRestaurant){
         $http.put(url + '/' + id + '.json', updatedRestaurant).success(function(resp){
           $rootScope.$broadcast('restaurant:edited');
-          console.log("restaurant updated");
         });
       };
 

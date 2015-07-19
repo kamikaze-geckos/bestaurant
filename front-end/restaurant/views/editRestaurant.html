@@ -19,9 +19,12 @@
         <label for="pic">Image</label>
       </div>
       <div>
-        <input type="submit" name="submitButton" value="Submit Changes" ng-click="editRestaurant(updatedRestaurant.id, updatedRestaurant)">
-        <div class="alertItem"><h3>Restaurant Updated</h3></div>
+        <a href="#/restaurants"><input type="submit" name="submitButton" value="Submit Changes" ng-click="editRestaurant(updatedRestaurant.id, updatedRestaurant)"></a>
       </div>
+    <div>
+      <a href="#/restaurants"><input type="submit" name="submitButton" value="Delete Restaurant" ng-click="deleteRestaurant(updatedRestaurant.id)"></a>
+      <div class="alertItem"><h3>Restaurant Updated</h3></div>
+    </div>
     </form>
   </div>
 </div>

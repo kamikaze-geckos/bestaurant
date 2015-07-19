@@ -216,6 +216,8 @@ DETAIL MENU ITEM
     margin: 0 auto;
     display: flex;
     flex-direction: column; }
+    .singleItemEdit #updateItemForm > div:nth-last-of-type(2) {
+      padding: 0; }
     .singleItemEdit #updateItemForm > div:last-of-type {
       padding: 0; }
     .singleItemEdit #updateItemForm > div {
@@ -223,11 +225,15 @@ DETAIL MENU ITEM
       border: 2px solid #DCFA7C;
       margin-bottom: 25px;
       padding: 10px; }
-      .singleItemEdit #updateItemForm > div > input[type=submit] {
+      .singleItemEdit #updateItemForm > div > a > input[type=submit] {
+        background-color: #980000;
+        color: #DCFA7C;
+        border: none;
         transition: all .25s ease;
         -webkit-transition: all .25s ease;
-        padding: 10px; }
-        .singleItemEdit #updateItemForm > div > input[type=submit]:hover {
+        padding: 10px;
+        width: 100%; }
+        .singleItemEdit #updateItemForm > div > a > input[type=submit]:hover {
           background-color: #DCFA7C;
           color: #980000; }
       .singleItemEdit #updateItemForm > div > input {
@@ -286,6 +292,9 @@ SINGLE MENU ITEM
   border-top: none;
   margin: auto;
   margin-bottom: 50px; }
+
+.editRestaurantLink {
+  float: right; }
 
 .subMenu {
   height: 500px;

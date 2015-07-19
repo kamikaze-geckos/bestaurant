@@ -16,7 +16,7 @@
     <div class="restaurantBlock" ng-repeat="restaurant in restaurants | filter:search:strict" ng-model="search">
       <img ng-if="restaurant.pic" ng-src="{{ restaurant.pic }}"/>
       <img ng-if="!restaurant.pic" src="http://lorempixel.com/480/400/food/2/"/>
-      <a href="#/{{restaurant.id}}" ng-click="">
+      <a href="#/{{restaurant.id}}" ng-click="loadEditTemplate(restaurant)">
         <div class="restaurantInfo">
           <div class="restaurantTitle">
             <h2>{{ restaurant.name }}</h2>

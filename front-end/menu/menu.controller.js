@@ -3,18 +3,15 @@
   angular
     .module('menu')
     .controller('MenuController', function($scope, MenuService, $routeParams){
-      
+
       $scope.updatedItem ={};
 
       MenuService.getMenu($routeParams.restaurantId).success(function(items){
-        console.log(items);
         $scope.items = items;
       });
 
       if($routeParams.itemId){
-        console.log($routeParams.itemId);
         MenuService.getItem($routeParams.itemId).success(function(item){
-          console.log(item);
           $scope.item = item;
           $scope.updatedItem = item;
         });
@@ -29,15 +26,12 @@
       };
 
       $scope.deleteItem = function(id){
-        console.log("delete");
         MenuService.deleteItem(id);
       };
 
 
       $scope.editItem = function(id, updatedItem){
         $('.alertItem').fadeIn('slow').fadeOut('slow');
-        console.log("edit");
-        console.log(updatedItem);
         MenuService.editItem(id, updatedItem);
       };
 
