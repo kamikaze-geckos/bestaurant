@@ -313,6 +313,9 @@ DETAIL MENU ITEM
     display: flex;
     flex-direction: column;
 
+    > div:nth-last-of-type(3) {
+      padding: 0;
+    }
     > div:nth-last-of-type(2) {
       padding: 0;
     }
@@ -374,26 +377,6 @@ DETAIL MENU ITEM
       }
     }
   }
-  // >div{
-  //   border: 2px solid #DCFA7C;
-  //   margin-bottom: 25px;
-  //   padding: 10px;
-  //
-  //   >input[type=submit]{
-  //     transition: all .25s ease;
-  //     -webkit-transition: all .25s ease;
-  //     text-align: center;
-  //     padding: 10px;
-  //     background-color: #980000;
-  //     border: none;
-  //     font-size: 1.25rem;
-  //
-  //     &:hover {
-  //       background-color: $c3;
-  //       color: $c2;
-  //     }
-  //   }
-  // }
 }
 
 .alertItem {

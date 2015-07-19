@@ -216,6 +216,8 @@ DETAIL MENU ITEM
     margin: 0 auto;
     display: flex;
     flex-direction: column; }
+    .singleItemEdit #updateItemForm > div:nth-last-of-type(3) {
+      padding: 0; }
     .singleItemEdit #updateItemForm > div:nth-last-of-type(2) {
       padding: 0; }
     .singleItemEdit #updateItemForm > div:last-of-type {
