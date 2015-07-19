@@ -12,13 +12,10 @@
     </div>
     <div class="singleItemDescription">
       <div>
-        {{item.name}}
+        {{item.name}} - {{item.price | currency}}
       </div>
       <div>
-        {{item.description}}
-      </div>
-      <div>
-        {{item.price | currency}}
+        <p>{{item.description}}</p>
       </div>
     </div>
   </div>
@@ -30,7 +27,7 @@
       <label for="name">Name</label>
     </div>
     <div>
-      <input type="text" name="price" ng-model="updatedItem.price | currency" required>
+      <input type="text" name="price" ng-model="updatedItem.price" required>
       <label for="price">Price</label>
     </div>
     <div>

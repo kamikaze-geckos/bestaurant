@@ -239,7 +239,6 @@ DETAIL MENU ITEM
 }
 
 .singleItem{
-  height: 150px;
   background-color: white;
   margin-bottom: 30px;
   border: 2px solid $c2;
@@ -254,6 +253,7 @@ DETAIL MENU ITEM
     flex-grow: 1;
     width:200px;
     height:200px;
+    padding:10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,10 +270,11 @@ DETAIL MENU ITEM
     height: 100%;
     width: 100%;
     font-size: 1.5rem;
-    padding: 0 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px;
+
+    >div>p{
+      font-size: 0.6em;
+    }
   }
 }
 
@@ -312,7 +313,13 @@ DETAIL MENU ITEM
     display: flex;
     flex-direction: column;
 
-    > div:last-of-type {
+    > div:nth-last-of-type(3) {
+      padding: 0;
+    }
+    > div:nth-last-of-type(2) {
+      padding: 0;
+    }
+    >div:last-of-type{
       padding: 0;
     }
 
@@ -321,15 +328,20 @@ DETAIL MENU ITEM
       border: 2px solid $c3;
       margin-bottom: 25px;
       padding: 10px;
+      >a{
+        > input[type=submit] {
+          background-color: $c2;
+          color: $c3;
+          border:none;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
+          padding: 10px;
+          width: 100%;
 
-      > input[type=submit] {
-        transition: all .25s ease;
-        -webkit-transition: all .25s ease;
-        padding: 10px;
-
-        &:hover {
-          background-color: $c3;
-          color: $c2;
+          &:hover {
+            background-color: $c3;
+            color: $c2;
+          }
         }
       }
 
@@ -405,6 +417,10 @@ SINGLE MENU ITEM
   border-top: none;
   margin: auto;
   margin-bottom: 50px;
+}
+
+.editRestaurantLink{
+  float:right;
 }
 
 .subMenu{

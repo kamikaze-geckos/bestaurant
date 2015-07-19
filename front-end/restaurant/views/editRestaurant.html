@@ -1,0 +1,33 @@
+<div class="pageWrapper">
+  <div class="singleItemEdit">
+    <h2>Edit Restaurant</h2>
+    <form id="updateItemForm" novalidate>
+      <div>
+        <input type="text" name="name" ng-model="updatedRestaurant.name" required>
+        <label for="name">Name</label>
+      </div>
+      <div>
+        <input type="text" name="location" ng-model="updatedRestaurant.location" required>
+        <label for="location">Location</label>
+      </div>
+      <div>
+        <input type="text" name="cuisine" ng-model="updatedRestaurant.cuisine">
+        <label for="cuisine">Cuisine</label>
+      </div>
+      <div>
+        <input type="text" name="pic" ng-model="updatedRestaurant.pic">
+        <label for="pic">Image</label>
+      </div>
+      <div>
+        <a href="#/restaurants"><input type="submit" name="submitButton" value="Submit Changes" ng-click="editRestaurant(updatedRestaurant.id, updatedRestaurant)"></a>
+      </div>
+      <div>
+        <a href="#/restaurants"><input type="submit" name="submitButton" value="Cancel Changes"></a>
+      </div>
+      <div>
+        <a href="#/restaurants"><input type="submit" name="submitButton" value="Delete Restaurant" ng-click="deleteRestaurant(updatedRestaurant.id)"></a>
+        <div class="alertItem"><h3>Restaurant Updated</h3></div>
+      </div>
+    </form>
+  </div>
+</div>
