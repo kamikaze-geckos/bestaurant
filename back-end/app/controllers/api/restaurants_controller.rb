@@ -1,4 +1,5 @@
 class Api::RestaurantsController < ApplicationController
+  attr_accessor :item
 
   def index
     @restaurants = Restaurant.all
@@ -62,7 +63,7 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :location, :cuisine)
+    params.require(:restaurant).permit(:name, :location, :cuisine, :pic)
   end
 
 end

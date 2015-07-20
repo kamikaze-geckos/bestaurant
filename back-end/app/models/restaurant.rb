@@ -1,6 +1,5 @@
-  class Restaurant < ActiveRecord::Base
-  has_many :items, through: :menu
-  has_one :menu
+class Restaurant < ActiveRecord::Base
+  has_many :items
 
   validates :name, :location, presence: true
 end

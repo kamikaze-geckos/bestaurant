@@ -1,6 +1,5 @@
 class Item < ActiveRecord::Base
-   belongs_to :restrauant
-   belongs_to :menu
+   belongs_to :restaurant
 
   validates :name, :price, presence: true
 end

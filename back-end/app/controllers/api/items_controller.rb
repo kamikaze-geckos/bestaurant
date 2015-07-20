@@ -1,12 +1,12 @@
 class Api::ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    @items = Restaurant.find(params[:restaurant_id]).items
     respond_to do |format|
       format.json { render json: @items }
     end
   end
-  # This works
+
   def show
     @item = find_item
     respond_to do |format|
@@ -15,7 +15,7 @@ class Api::ItemsController < ApplicationController
   end
 
   def create
-   @item = Item.new(item_params)
+   @item = Restaurant.find(params[:restaurant_id]).item.new(item_params)
    respond_to do |format|
      if @item.save
        format.json { render status: 200, json: @item }
